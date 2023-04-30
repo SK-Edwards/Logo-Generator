@@ -1,0 +1,23 @@
+{
+  "name": "logo-generator",
+  "version": "1.0.0",
+  "description": "A logo maker CLI application.",
+  "main": "logo.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SK-Edwards/Logo-Generator.git"
+  },
+  "author": "SK.Edwards",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SK-Edwards/Logo-Generator/issues"
+  },
+  "homepage": "https://github.com/SK-Edwards/Logo-Generator#readme",
+  "dependencies": {
+    "inquirer": "^8.2.4",
+    "jest": "^24.9.0"
+  }
+}
