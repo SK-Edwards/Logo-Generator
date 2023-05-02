@@ -1,15 +1,15 @@
 //Importing from the data needed.
 const inquirer = require('inquirer');
-const shapes = require('./Utils/shapes');
+const logoCreation= require('./Utils/logoCreation');
 const fs = require('fs');
-
+const {writeFile} = require('fs/promises')
 // Prompt question to collect the logo specifics
 
 const promptQuestions = [
  {
     type: 'list',
     message: 'What shape would you like your logo to be?',
-    name: 'logo-shape',
+    name: 'logoShape',
     choices: ['Square', 'Triangle', 'Circle'],
     validate: (value) => {if(value){return true} else { return 'Value Required'}}
 },
@@ -24,14 +24,14 @@ const promptQuestions = [
 {
     type: 'text',
     message: 'What color would you like your logo to be?',
-    name: 'shape-color',
+    name: 'shapeColor',
     validate: (value) => {if(value){return true} else { return 'Value Required'}}
 },
 
 {
     type: 'text',
     message: 'What color would you like your logo text to be?',
-    name: 'text-color',
+    name: 'textColor',
     validate: (value) => {if(value){return true} else { return 'Value Required'}}
 },
 
@@ -53,10 +53,12 @@ function writeToFile(fileName, data) {
 // Function to initialize the app.
 
 function init() {
-    inquirer.prompt(questions).then((data) => {
+    inquirer.prompt(promptQuestions).then((data) => {
         console.log(JSON.stringify(data, null, " "));
         
     
-        writeToFile("./logo.svg", logoCreation({...data}));
+       return writeFile("./logo.svg", logoCreation({data}));
 
 })};
+
+init();
