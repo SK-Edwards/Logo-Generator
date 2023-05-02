@@ -1,6 +1,6 @@
 //Importing from the data needed.
 const inquirer = require('inquirer');
-const logoCreation= require('./Utils/logoCreation');
+const logoCreation= require('./Utils/logoGeneration');
 const fs = require('fs');
 const {writeFile} = require('fs/promises')
 // Prompt question to collect the logo specifics
@@ -57,7 +57,7 @@ function init() {
         console.log(JSON.stringify(data, null, " "));
         
     
-       return writeFile("./logo.svg", logoCreation({data}));
+       return writeFile("./logo.svg", logoCreation({...data}));
 
 })};
 
