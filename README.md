@@ -12,7 +12,7 @@ This was an assignment from my coding bootcamp, which.
 
 The requirements for the logo generator were as follows:
 
-![*:]()
+![*:](https://github.com/SK-Edwards/Logo-Generator/blob/main/Utils/images/Screenshot%202023-05-08%20154551.png)
 
 In the command line, the user is prompted with questions
 The user inputs are saved and used to generated a logo via SVG file
