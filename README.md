@@ -21,7 +21,7 @@ The SVG file creates a 300x200px image that matches the user criteria
 
 Click on this link to see a live demo of a Logo being generated.
 
-* <link>
+* <link>(https://drive.google.com/file/d/1lURE0KFE-0i6Lk8EGR_d2OhPDUxJsSA8/view)
 
 # Installation
 You will need the following NPM libraries for this to run:
